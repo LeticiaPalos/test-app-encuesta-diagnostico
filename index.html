@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<title>Encuesta MiTec Móvil</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+
+		<!-- SRC JavaScript -->
+		<script src="eventos.js"></script>
+		<script src="phonegap.js"></script>
+
+		<!-- JQuery Mobile -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+
+	</head>
+	<body>
+		<meta itemprop="name" content="Encuesta de Diagnóstico">
+		<script type="text/javascript">var submitted=false;</script>
+		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='gracias.html';}"></iframe>
+		<form action="https://docs.google.com/a/itesm.mx/forms/d/1FfpNj6tRHhHHZKoXhZSgGFZoiW3legxRX435SY_0Rfc/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+			<div data-role="page" data-theme="a" id="page1">
+				<div data-theme="b" data-role="header">
+					<h1>Encuesta Diagnostico</h1>
+				</div>
+				<div data-role="content" style="padding: 15px">
+					<div data-role="fieldcontain" id="question_1" data-theme="c">
+						<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+							<legend>1. Correo electrónico(@itesm.mx)</legend>
+							<input type="text" name="entry.1621566281" value="" id="entry_1621566281" data-theme="c">
+						</fieldset>
+					</div>
+					<div data-role="fieldcontain" id="question_2" data-theme="c">
+						<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+							<legend>2. Área de disciplina</legend>
+							<input name="entry.1181441020" id="group_1181441020_1" value="Agricultura y AlimentosArquitectura" type="checkbox" data-theme="c" onclick="">
+							<label for="group_1181441020_1"> Agricultura y AlimentosArquitectura </label>
+							<input name="entry.1181441020" id="group_1181441020_2" value="Ciencias Sociales y Humanidades" type="checkbox" data-theme="c" onclick="">
+							<label for="group_1181441020_2"> Ciencias Sociales y Humanidades </label>
+							<input name="entry.1181441020" id="group_1181441020_3" value="Comunicación y Periodismo" type="checkbox" data-theme="c" onclick="">
+							<label for="group_1181441020_3"> Comunicación y Periodismo </label>
+							<input name="entry.1181441020" id="group_1181441020_4" value="Derecho" type="checkbox" data-theme="c" onclick="">
+							<label for="group_1181441020_4"> Derecho </label>
+							<input name="entry.1181441020" id="group_1181441020_5" value="Negocios y Administración" type="checkbox" data-theme="c" onclick="">
+							<label for="group_1181441020_5"> Negocios y Administración </label>
+							<input name="entry.1181441020" id="group_1181441020_6" value="Salud" type="checkbox" data-theme="c" onclick="">
+							<label for="group_1181441020_6"> Salud </label>
+							<input name="entry.1181441020" id="group_1181441020_7" value="Tecnologías de Información y Electrónica" type="checkbox" data-theme="c" onclick="">
+							<label for="group_1181441020_7"> Tecnologías de Información y Electrónica </label>
+							<input name="entry.1181441020" id="group_1181441020_8" value="__other_option__" type="checkbox" data-theme="c" onclick="enable_another('entry_1181441020_other_option_response', 'group_1181441020_8')">
+							<label for="group_1181441020_8">Otro</label>
+							<input name="entry.1181441020.other_option_response" id="entry_1181441020_other_option_response" value=""  type="text" data-theme="c" style="display:none;">
+						</fieldset>
+					</div>
+					<div data-role="fieldcontain" id="question_3" data-theme="c">
+						<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+							<legend>
+							   3. ¿Tienes un Smartphone?
+							</legend>
+							<input name="entry.978915888" id="group_978915888_1" value="Sí" type="radio" data-theme="c" onclick="show('question_4');">
+								<label for="group_978915888_1"> Sí </label>
+							<input name="entry.978915888" id="group_978915888_2" value="No" type="radio" data-theme="c" onclick="">
+								<label for="group_978915888_2"> No </label>
+							<input name="entry.978915888" id="group_978915888_3" value="No sé si es un Smartphone" type="radio" data-theme="c" onclick="show('question_4');">
+								<label for="group_978915888_3"> No sé si es un Smartphone </label>
+						 </fieldset>
+					</div>
+					<div data-role="fieldcontain" id="question_4" data-theme="c" style="display:none;">
+						<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+							<legend>4. ¿Qué sistema operativo tiene tu Smartphone?</legend>
+							<input name="entry.1439147889" id="group_1439147889_1" value="No conozco el sistema operativo de mi Smartphone" type="radio" data-theme="c" onclick="hide('entry.1439147889.other_option_response');"> <label for="group_1439147889_1"> No conozco el sistema operativo de mi Smartphone </label>									
+							<input name="entry.1439147889" id="group_1439147889_2" value="Android" type="radio" data-theme="c" onclick="hide('entry.1439147889.other_option_response');"> <label for="group_1439147889_2"> Android </label>
+							<input name="entry.1439147889" id="group_1439147889_3" value="Blackberry OS" type="radio" data-theme="c" onclick="hide('entry.1439147889.other_option_response');"> <label for="group_1439147889_3"> Blackberry OS </label>
+							<input name="entry.1439147889" id="group_1439147889_4" value="iOS (Apple)" type="radio" data-theme="c" onclick="hide('entry.1439147889.other_option_response');"> <label for="group_1439147889_4"> iOS (Apple) </label>
+							<input name="entry.1439147889" id="group_1439147889_5" value="Symbian" type="radio" data-theme="c" onclick="hide('entry.1439147889.other_option_response');"> <label for="group_1439147889_5"> Symbian </label>
+							<input name="entry.1439147889" id="group_1439147889_6" value="Windows Mobile" type="radio" data-theme="c" onclick="hide('entry.1439147889.other_option_response');"> <label for="group_1439147889_6">Windows Mobile </label>
+							<input name="entry.1439147889" id="group_1439147889_7" value="Windows Phone&nbsp;" type="radio" data-theme="c" onclick="hide('entry.1439147889.other_option_response');"> <label for="group_1439147889_7"> Windows Phone </label>
+							<input name="entry.1439147889" id="group_1439147889_8" value="__other_option__" type="radio" data-theme="c" onclick="enable_another('entry.1439147889.other_option_response', 'group_1439147889_8')">
+							<label for="group_1439147889_8">Otro</label>
+							<input name="entry.1439147889.other_option_response" id="entry.1439147889.other_option_response" value=""  type="text" data-theme="c" style="display:none;">
+					   </fieldset>
+					</div>
+					<div data-role="fieldcontain" id="question_5" data-theme="c">
+						<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+							<legend>5.¿Tienes una Tableta?</legend>
+							<input name="entry.675630210" id="group_675630210_1" value="Sí" type="radio" data-theme="c" onclick="show('question_6');"> <label for="group_675630210_1"> Sí </label>
+							<input name="entry.675630210" id="group_675630210_2" value="No" type="radio" data-theme="c" onclick=""> <label for="group_675630210_2"> No </label>
+						</fieldset>
+					</div>
+					<div data-role="fieldcontain" id="question_6" data-theme="c" style="display:none;">
+						<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+							<legend>6. ¿Qué sistema operativo utiliza tu Tableta?</legend>
+							<input name="entry.219317333" id="group_219317333_1" value="No conozco el sistema operativo de mi Tableta" type="radio" data-theme="c"><label for="group_219317333_1" onclick="hide('entry_219317333_other_option_response');">No conozco el sistema operativo de mi Tableta</label>
+							<input name="entry.219317333" id="group_219317333_2" value="iOS (Apple)"  type="radio" data-theme="c" onclick="hide('entry_219317333_other_option_response');"><label for="group_219317333_2">iOS (Apple)</label>
+							<input name="entry.219317333" id="group_219317333_3" value="Android" type="radio" data-theme="c" onclick="hide('entry_219317333_other_option_response');"><label for="group_219317333_3">Android</label>
+							<input name="entry.219317333" id="group_219317333_4" value="Windows 8" type="radio" data-theme="c" onclick="hide('entry_219317333_other_option_response');"><label for="group_219317333_4">Windows 8</label>
+							<input name="entry.219317333" id="group_219317333_5" value="Windows RT"  type="radio" data-theme="c" onclick="hide('entry_219317333_other_option_response');"><label for="group_219317333_5">Windows RT</label>
+							<input name="entry.219317333" id="group_219317333_6" value="__other_option__" type="radio" data-theme="c" onclick="enable_another('entry_219317333_other_option_response', 'group_219317333_6')"><label for="group_219317333_6">Otro</label>
+								<input name="entry.219317333.other_option_response" id="entry_219317333_other_option_response" value=""  type="text" data-theme="c" style="display:none;">
+						</fieldset>
+					</div>
+				</div>
+				<div>
+					<input type="submit" name="submit" value="Enviar" id="ss-submit">					
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
